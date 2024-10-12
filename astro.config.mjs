@@ -44,5 +44,10 @@ export default defineConfig({
 	output: 'server',
 	adapter: vercel({
 		webAnalytics: { enabled: true }
-	})
+	}),
+	image: {
+		service: {
+			entrypoint: 'astro/assets/services/noop'
+		}
+	}
 })
